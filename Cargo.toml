@@ -1,0 +1,24 @@
+[package]
+name = "todo-axum"
+description = "Simple axum todo example api with utoipa and Swagger UI, Rapidoc, Redoc, and Scalar"
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+authors = ["Elli Example <example@example.com>"]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+axum = "0.8.0"
+hyper = { version = "1.0.1", features = ["full"] }
+tokio = { version = "1.17", features = ["full"] }
+tower = "0.5"
+utoipa = { version = "5.3.1", features = ["axum_extras"] }
+utoipa-swagger-ui = { version = "9.0.0", features = ["axum"] }
+utoipa-axum = "0.2"
+utoipa-redoc = {  version="6.0.0", features = ["axum"] }
+utoipa-rapidoc = {  version="6.0.0",  features = ["axum"] }
+utoipa-scalar = {  version="0.3.0", features = ["axum"] }
+serde = { version = "1.0", features = ["derive"] }
+
+[workspace]
